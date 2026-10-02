@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Why a builder won't work on a blocked blueprint (shown when right-clicking it). {0}: plant label -->
+  <BDCP.FailReason.WaitingForCutters>waiting for a plant cutter to cut {0}</BDCP.FailReason.WaitingForCutters>
+  <BDCP.FailReason.NeedsCutting>{0} has to be cut by a plant cutter first</BDCP.FailReason.NeedsCutting>
+  <BDCP.FailReason.SpecialPlant>{0} has to be marked for cutting by hand</BDCP.FailReason.SpecialPlant>
+  <BDCP.FailReason.CuttingPrevented>cutting {0} is prevented</BDCP.FailReason.CuttingPrevented>
+
+  <!-- Shown once per plant. {0}: plant label -->
+  <BDCP.Message.SpecialPlant>{0} is in the way of construction. Special plants are not marked for cutting automatically - mark it yourself if you really want it gone.</BDCP.Message.SpecialPlant>
+  <BDCP.Message.CuttingPrevented>{0} is in the way of construction, but cutting it is prevented. Allow cutting it and mark it for cutting if you really want it gone.</BDCP.Message.CuttingPrevented>
+
+  <!-- Mod settings -->
+  <BDCP.Settings.Intro>Builders don't cut plants that are in the way of construction. Those plants get a cut order instead, so your plant cutters do the job.</BDCP.Settings.Intro>
+  <BDCP.Settings.MarkOnPlacement>Mark plants for cutting as soon as a blueprint or roof area is placed</BDCP.Settings.MarkOnPlacement>
+  <BDCP.Settings.MarkOnPlacement.Tip>If off, the plants are marked when a builder first tries to work on the blueprint or roof.</BDCP.Settings.MarkOnPlacement.Tip>
+  <BDCP.Settings.IncludeRoofs>Also for plants that block building roofs</BDCP.Settings.IncludeRoofs>
+  <BDCP.Settings.IncludeRoofs.Tip>Trees in a build-roof area have to be cut before the roof can be built.</BDCP.Settings.IncludeRoofs.Tip>
+  <BDCP.Settings.OnlyTrees>Only trees</BDCP.Settings.OnlyTrees>
+  <BDCP.Settings.OnlyTrees.Tip>Builders keep clearing other plants (bushes, crops, cacti, ...) themselves.</BDCP.Settings.OnlyTrees.Tip>
+  <BDCP.Settings.ProtectSpecial>Never mark special plants automatically</BDCP.Settings.ProtectSpecial>
+  <BDCP.Settings.ProtectSpecial.Tip>Plants like the anima tree or the Gauranlen tree are left alone and you get a message instead. Mark them for cutting yourself if you really want them gone.</BDCP.Settings.ProtectSpecial.Tip>
+  <BDCP.Settings.NoCuttersFallback>Builders cut plants themselves if nobody is assigned to plant cutting</BDCP.Settings.NoCuttersFallback>
+  <BDCP.Settings.NoCuttersFallback.Tip>Counts every colonist, slave and mechanoid on the map that has plant cutting enabled in the work tab. Without anyone, construction would otherwise wait forever.</BDCP.Settings.NoCuttersFallback.Tip>
+  <BDCP.Settings.SkilledBuilders>Builders with a high Plants skill cut plants themselves</BDCP.Settings.SkilledBuilders>
+  <BDCP.Settings.SkilledBuilders.Tip>Builders whose Plants skill is at least the value below cut blocking plants like in vanilla.</BDCP.Settings.SkilledBuilders.Tip>
+  <BDCP.Settings.MinSkill>Minimum Plants skill: {0}</BDCP.Settings.MinSkill>
+  <BDCP.Settings.Reset>Reset to defaults</BDCP.Settings.Reset>
+
+</LanguageData>

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>BuildersDontCutPlants</AssemblyName>
+    <RootNamespace>BuildersDontCutPlants</RootNamespace>
+    <Version>1.0.0</Version>
+    <OutputPath>$(MSBuildThisFileDirectory)../$(RimWorldVersion)/Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!-- Only our own DLL goes into Assemblies: Harmony comes from the Harmony mod, the game DLLs from the game. -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <!-- obj/<version>/ of the other game version must not be compiled in. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(RimWorldVersion)' == '1.5'">
+    <RimWorldRefVersion>1.5.4409</RimWorldRefVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(RimWorldVersion)' == '1.6'">
+    <RimWorldRefVersion>1.6.4871</RimWorldRefVersion>
+    <DefineConstants>$(DefineConstants);RW_1_6</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="$(RimWorldRefVersion)" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+</Project>

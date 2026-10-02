@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Builders Don't Cut Plants</name>
+  <author>silvanalig95-cmd</author>
+  <packageId>silvanalig95.BuildersDontCutPlants</packageId>
+  <url>https://github.com/silvanalig95-cmd/rimworld-plant-cut</url>
+  <supportedVersions>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <modVersion IgnoreIfNoMatchingField="True">1.0.0</modVersion>
+  <description>Builders no longer cut down trees and other plants that are in the way of construction. The plant gets a normal "cut" order instead, so it is cut by the pawns you assigned to plant cutting (with their skill, speed and harvest yield) while your builders keep building.
+
+Works for blueprints, frames, reinstalls and building roofs.
+
+- Plants are marked for cutting as soon as you place a blueprint or a roof area (can be turned off).
+- If you cancel a blueprint, the cut orders this mod placed for it are removed again.
+- Special plants (anima tree, Gauranlen tree, ...) are never marked automatically. You get a message instead.
+- Right-click a blocked blueprint with a builder to see what it is waiting for.
+
+Settings:
+- Only trees: builders still clear bushes, crops and other plants themselves.
+- Include roofs: also for trees that block roof building.
+- If nobody on the map is assigned to plant cutting, builders cut themselves so construction can't get stuck (on by default).
+- Builders with a high Plants skill may cut themselves (off by default).
+
+Compatibility:
+- Only Harmony postfixes, no new defs, nothing is saved in your save game. Safe to add to or remove from an existing save.
+- Multiplayer-friendly: nothing is changed from the right-click menu, only from the normal game simulation.
+- Uses the vanilla cut order, so anything that works with plant cutting works with this.</description>
+</ModMetaData>

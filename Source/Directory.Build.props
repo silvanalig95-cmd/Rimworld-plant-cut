@@ -1,0 +1,8 @@
+<Project>
+  <!-- One project, built once per RimWorld version: dotnet build -p:RimWorldVersion=1.6 -->
+  <PropertyGroup>
+    <RimWorldVersion Condition="'$(RimWorldVersion)' == ''">1.6</RimWorldVersion>
+    <!-- Separate intermediate folders so the 1.5 and 1.6 builds don't share restore/compile output. -->
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj/$(RimWorldVersion)/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
